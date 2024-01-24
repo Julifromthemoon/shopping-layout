@@ -1,0 +1,179 @@
+main {
+  display: block;
+  background-color: rgb(241, 245, 248);
+}
+.products {
+  font: quicksand;
+  font-size: small;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  _grid-template-rows: repeat(3, 1fr);
+  margin: 10px;
+  gap: 1.5rem;
+  border-radius: 25px;
+}
+.product {
+  /* position: relative; */
+
+  background-color: rgb(250, 252, 253);
+  border-radius: 5px 5px;
+  display: grid;
+}
+.image.wrapper {
+  position: relative;
+}
+.product-image {
+  display: block;
+  max-width: 100%;
+  border-radius: 5px 5px;
+  /* background-image: linear-gradient(to top, pink, transparent); */
+}
+.image.wrapper::after {
+  content: "";
+
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+
+  background-image: linear-gradient(to to bottomtop, pink, transparent);
+}
+.Text {
+  margin: 10px;
+}
+
+.badge1 {
+  position: absolute;
+
+  right: 1rem;
+  top: 1rem;
+
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0.5em;
+}
+
+.footer {
+  display: grid;
+  gap: 1rem;
+  position:absolute
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-rows: 15% 15% 15% 30%;
+  background-color: lightgrey;
+  width: 92%;
+  _height: 150px;
+  margin: 10px;
+  border: transparent;
+  border-radius: 5px;
+  row-gap: ;
+}
+.prize {
+  display: grid;
+  grid-column: 1 / span 4;
+  align-items: center;
+  justify-items: center;
+  margin: 10px;
+  border: 5px solid white;
+  border-radius: 5px 5px;
+  width: 70%;
+  height: 50%;
+  background-color: white;
+}
+.Size {
+  _margin: 10px;
+  grid-column-start: 1 / span 1;
+  grid-row-start: 2;
+}
+.dropdown_size {
+  display: grid;
+  position: relative;
+  grid-row-start: 2;
+  grid-row-start: 2;
+  align-items: end;
+  justify-items: end;
+  height: 70%;
+  width: 90;
+}
+
+.Quantity {
+  display: grid;
+  grid-column-start: 3;
+  grid-row-start: 2;
+  width: 70%;
+  justify-self: start;
+  width: 70%;
+  height: 70%;
+}
+.amount {
+  display: grid;
+  grid-column-start: 4;
+  align-content: center;
+}
+.color {
+  grid-row-start: 3;
+  grid-column-start: 1;
+}
+
+.indicator {
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	background-color: lightgray;
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+	border-radius: 50%;
+}
+
+input[type="radio"] {
+	display: none;
+}
+input[value="black"] {
+  display: none,
+}
+
+input[value="black"] ~ .indicator {
+	
+	background-color: black;
+}
+
+input[value="blue"] ~ .indicator {
+
+	background-color: dodgerblue;
+}
+
+input[value="brown"] ~ .indicator {
+	
+	background-color: brown;
+}
+
+input[value="black"]:checked ~ .indicator {
+	outline-color: black;
+}
+
+input[value="blue"]:checked ~ .indicator {
+	outline-color: dodgerblue;
+}
+
+input[value="brown"]:checked ~ .indicator {
+	outline-color: brown;
+}
+
+.badge2 {
+  display: grid;
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  
+background-color: rgb(56, 56, 243);
+  align-items: center;
+  align-self: center;
+  margin: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  height: 80%;
+  border-radius: 5px 5px;
+  justify-content: center;
+  width: 150px;
+  color: white;
+  
+}
